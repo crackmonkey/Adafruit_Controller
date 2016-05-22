@@ -58,22 +58,26 @@ class Adafruit_Controller {
   quatHandlerFuncPtr quatHandler = NULL;
   colorHandlerFuncPtr colorHandler = NULL;
   buttonHandlerFuncPtr buttonHandler = NULL;
+  
+  bool isValidPacket();
+  
   public:
 
   Adafruit_Controller(Stream &ble);
 
   // read input and see if we have a complete packet
   bool process();
-  bool isValidPacket();
   void printPacket(Stream &stream);
 
+  // register callback functions
   void handleAccelerometer(threeAxisHandlerFuncPtr handler);
+  void handleButton(buttonHandlerFuncPtr handler);
+  void handleColor(colorHandlerFuncPtr handler);
   void handleGyroscope(threeAxisHandlerFuncPtr handler);
   void handleMagnetometer(threeAxisHandlerFuncPtr handler);
   void handleLocation(threeAxisHandlerFuncPtr handler);
   void handleQuaternion(quatHandlerFuncPtr handler);
-  void handleColor(colorHandlerFuncPtr handler);
-  void handleButton(buttonHandlerFuncPtr handler);
+
 };
 
 #endif

@@ -1,0 +1,10 @@
+Adafruit_Controller KEYWORD1
+process KEYWORD2
+printPacket KEYWORD2
+handleAccelerometer KEYWORD2
+handleButton KEYWORD2
+handleColor KEYWORD2
+handleGyroscope KEYWORD2
+handleMagnetometer KEYWORD2
+handleLocation KEYWORD2
+handleQuaternion KEYWORD2
